@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Home | Right Tyres</title>
+    <link rel="stylesheet" href="style.css">
+    <script>if (!sessionStorage.getItem('RightTyresUserAuth')) window.location.href = 'login.html';</script>
+    <style>
+        /* Specific Styles for the Unique Scrollable Home Page */
+        body {
+            background-color: #f0f4f8; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* UPGRADED: Broader Header and Larger Text */
+        header { 
+            background: #0d6efd; 
+            padding: 25px 40px; /* Made the header significantly broader */
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h2 { color: white; margin: 0; font-size: 32px; letter-spacing: 1px; } /* Larger Logo Font */
+        nav a { color: white; text-decoration: none; margin-left: 30px; font-weight: bold; font-size: 18px; transition: opacity 0.2s;} /* Larger Link Font */
+        nav a:hover { opacity: 0.8; }
+
+        /* The Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 5%;
+            background: white;
+            border-bottom: 5px solid #0d6efd;
+        }
+        .hero-text { max-width: 50%; }
+        .hero-text h1 { color: #0d6efd; font-size: 52px; margin-bottom: 20px; line-height: 1.2; } /* Massive Headline */
+        .hero-text p { color: #555; font-size: 22px; line-height: 1.6; margin-bottom: 30px; } /* Larger Paragraph */
+        .hero-image { width: 45%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+        .hero-image img { width: 100%; height: auto; display: block; }
+
+        /* Informational Sections */
+        .info-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 5%;
+        }
+        .info-section.reverse { flex-direction: row-reverse; background: white; }
+        .info-text { max-width: 50%; }
+        .info-text h2 { color: #0d6efd; font-size: 38px; margin-bottom: 20px; } /* Larger Section Headings */
+        .info-text p { color: #444; font-size: 19px; line-height: 1.8; margin-bottom: 20px; } /* Larger Reading Text */
+        .info-image { width: 40%; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); overflow: hidden; border: 4px solid white; }
+        .info-image img { width: 100%; height: auto; display: block; }
+
+        /* Stats Banner */
+        .stats-banner {
+            background: #0d6efd;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 5%;
+            text-align: center;
+        }
+        .stat-item h3 { font-size: 42px; margin: 0 0 10px 0; }
+        .stat-item p { margin: 0; font-size: 18px; opacity: 0.9; font-weight: bold; }
+
+        /* Footer */
+        footer { background: #333; color: white; text-align: center; padding: 30px; margin-top: 40px; font-size: 16px;}
+        
+        /* The Call to Action Button (Moved to bottom only) */
+        .action-btn {
+            display: inline-block;
+            background: #0d6efd;
+            color: white;
+            text-decoration: none;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            transition: all 0.3s ease;
+        }
+        .action-btn:hover { background: #0b5ed7; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4); }
+
+        @media (max-width: 768px) {
+            .hero, .info-section, .info-section.reverse { flex-direction: column; text-align: center; }
+            .hero-text, .info-text, .hero-image, .info-image { max-width: 100%; width: 100%; margin-bottom: 30px; }
+            .stats-banner { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>RIGHT TYRES</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profiler.html">Fleet Profiler</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#" onclick="sessionStorage.clear(); window.location.href='login.html';" style="color: #ffcccc;">Logout</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Strategic Intelligence for Indian Transport Fleets.</h1>
+            <p>Optimize your commercial fleet with data-driven tyre recommendations. We analyze vehicle configurations, operational terrain, and load dynamics to recommend the perfect rubber for your specific logistics requirements.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Fleet">
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-image">
+            <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Indian Trucking Logistics">
+        </div>
+        <div class="info-text">
+            <h2>The Indian Trucking Landscape</h2>
+            <p>The Indian logistics sector is one of the most demanding in the world. Commercial vehicles like the Tata LPT series and Ashok Leyland multi-axle trucks operate across extreme temperatures, variable road conditions, and frequent overloading scenarios.</p>
+            <p>In this environment, standardizing your fleet's tyre configuration is not just about maintenance—it is a critical financial strategy. A mismatched axle configuration on a 14-wheeler can reduce fuel efficiency by up to 12% and cause premature tread wear, directly impacting profitability.</p>
+        </div>
+    </section>
+
+    <section class="info-section reverse">
+        <div class="info-image">
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tyre Maintenance and Retreading">
+        </div>
+        <div class="info-text">
+            <h2>Tyre Maintenance & Retreading</h2>
+            <p><strong>The Power of Retreading:</strong> For heavy commercial vehicles, the initial purchase is only the first step. A high-quality premium radial tyre casing can be retreaded up to three times. This extends the lifecycle of the tyre by over 200% at a fraction of the cost of a new replacement.</p>
+            <p><strong>Tread Depth Management:</strong> Legal limits aside, operating a truck with a tread depth below 3mm drastically reduces braking efficiency, especially during the monsoon season. Regular alignment checks and proactive rotation between drive and trailer axles ensure even wear.</p>
+        </div>
+    </section>
+
+    <section class="stats-banner">
+        <div class="stat-item">
+            <h3>60%</h3>
+            <p>Of Fleet Breakdowns Are Tyre-Related</p>
+        </div>
+        <div class="stat-item">
+            <h3>₹40,000+</h3>
+            <p>Lost Annually Per Truck Due To Bad Pressure</p>
+        </div>
+        <div class="stat-item">
+            <h3>15%</h3>
+            <p>Fuel Savings With Optimized Radial Tyres</p>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-image">
+            <img src="https://images.unsplash.com/photo-1620054813589-91307b204646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Tyre Science">
+        </div>
+        <div class="info-text">
+            <h2>The Science of Tyres & Rims</h2>
+            <p><strong>Radial vs. Bias Ply:</strong> While Bias ply tyres offer thicker sidewalls suited for severe off-road overloading, modern Indian highways demand Radial tyres. Radials dissipate heat faster, offer significantly better puncture resistance, and provide a wider footprint for braking stability.</p>
+            <p><strong>Rim Dynamics (20" vs 22.5"):</strong> The shift from traditional 20-inch tube-type rims to 22.5-inch tubeless rims is revolutionary. Tubeless 22.5" rims reduce overall vehicle weight, eliminate the friction caused by inner tubes (lowering blow-out risks), and dramatically decrease the time required for maintenance.</p>
+        </div>
+    </section>
+
+    <section class="info-section reverse" style="background-color: #e8f0fe;">
+        <div class="info-image">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fleet Financials">
+        </div>
+        <div class="info-text">
+            <h2>Cost Per Kilometer (CPK) Economics</h2>
+            <p>Transport operators often make the mistake of buying the cheapest tyre available. True fleet optimization is measured in <strong>Cost Per Kilometer (CPK)</strong>.</p>
+            <p>A premium tier tyre might cost 30% more upfront, but its ability to handle higher mileage, resist heat degradation, and take multiple retreads often results in a 40% lower CPK over three years compared to budget brands.</p>
+            <br>
+            <a href="profiler.html" class="action-btn">Calculate Your Fleet Requirements ➔</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Right Tyres Enterprise Platform. Built for precision logistics in India.</p>
+    </footer>
+
+</body>
+</html>
